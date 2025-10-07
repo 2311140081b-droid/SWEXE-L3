@@ -8,3 +8,17 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+#pageFooter {
+  border-top: solid 1px #CCCCCC; text-align: center;
+  clear: both;
+}
+
+h2 {background-color: #FFFFCC; border-bottom: dashed 3px #555555}
+
+#sidebar {
+  width: 220px; float: right;
+}
+
+
+h1 {background-color: #4169e1;color:#ffa500;}

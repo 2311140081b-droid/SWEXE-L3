@@ -9,7 +9,7 @@ class BookmarksController < ApplicationController
 	@bookmark = Bookmark.new(title: params[:bookmark][:title],author: params[:bookmark][:author], url: params[:bookmark][:url])
 	if @bookmark.save
 		flash[:notice] = '1レコード追加しました'
-  		redirect_to '/' #=>一覧ページにリダイレクトする
+  		redirect_to root_path #=>一覧ページにリダイレクトする
   	else 
 		render 'new',status: :unprocessable_entity
 	end
@@ -18,7 +18,7 @@ class BookmarksController < ApplicationController
 	@bookmark = Bookmark.find(params[:id])
   	@bookmark.destroy
 	flash[:notice] = '1レコード削除しました'
-  	redirect_to '/'
+  	redirect_to root_path
   end
   def show
   	@bookmark = Bookmark.find(params[:id])
@@ -27,7 +27,7 @@ class BookmarksController < ApplicationController
   	@bookmark = Bookmark.find(params[:id])
   	if @bookmark.update(title: params[:bookmark][:title], author: params[:bookmark][:author], url: params[:bookmark][:url])
   		flash[:notice] = '1レコード更新しました'
-		redirect_to '/'
+		redirect_to root_path
   	else 
 		render 'new', status: :unprocessable_entity
 	end

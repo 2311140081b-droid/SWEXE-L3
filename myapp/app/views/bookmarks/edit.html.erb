@@ -7,12 +7,4 @@
 </ul>
 <% end %>
 
-<%= form_with model: @bookmark do |f| %>
-  <%= f.label :title, 'タイトル' %>
-  <%= f.text_field :title %>
-  <%= f.label :title, '作者' %>
-  <%= f.text_field :author %>
-  <%= f.label :url, 'URL' %>
-  <%= f.text_field :url %>
-  <%= f.submit '更新' %>
-<% end %>
+  <%= render "form" %>
